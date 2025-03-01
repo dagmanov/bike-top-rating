@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-
 <html lang="en-US">
 <head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>🚀 Top Bikes of the Month 🎉</title>
-<style>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>🚀 Top Bikes of the Month 🎉</title>
+  <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
     body {
       font-family: 'Roboto', Arial, sans-serif;
-      margin: 10px;
-      padding: 0;
-      overflow-x: hidden;
+      margin: 0;
+      padding: 10px;
       background-color: #f9f9f9;
+      color: #333;
     }
 
     h1 {
       text-align: center;
-      font-size: 22px;
+      font-size: 28px;
+      margin-top: 15px;
+      margin-bottom: 10px;
     }
 
     .join-link {
       text-align: right;
       font-size: 14px;
-      padding: 10px;
+      padding: 5px 10px;
     }
 
     .scrollable-table {
       overflow-x: auto;
+      margin: 0 auto;
+      max-width: 100%;
     }
 
     table {
-      width: 100%;
-      min-width: 500px;
+      margin: 20px auto; /* ensure centering */
       border-collapse: collapse;
-      margin: 10px auto;
-      table-layout: fixed;
+      width: 100%;
+      min-width: 600px; /* Adjust the minimum width as required */
+      max-width: 1000px;
+      table-layout: auto; /* adjust column width automatically */
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 6px;
     }
 
     th, td {
       border: 1px solid #ddd;
-      padding: 8px;
+      padding: 10px;
       text-align: center;
       word-wrap: break-word;
     }
@@ -54,10 +61,11 @@
     th {
       background-color: #4CAF50;
       color: white;
+      font-size: 16px;
     }
 
     img {
-      max-width: 100%;
+      width: 150px; /* fixed size to prevent small images issue */
       height: auto;
       border-radius: 4px;
     }
@@ -68,12 +76,21 @@
     }
 
     @media screen and (max-width: 600px) {
-      h1 {
-        font-size: 18px;
+      body {
+        padding: 5px;
       }
-      table, th, td {
+      h1 {
+        font-size: 22px;
+      }
+      table {
+        min-width: 100%;
+      }
+      th, td {
+        font-size: 13px;
         padding: 6px;
-        font-size: 12px;
+      }
+      img {
+        width: 100px; /* reduce on mobile for better fit */
       }
       .join-link {
         font-size: 12px;
@@ -82,8 +99,13 @@
   </style>
 </head>
 <body>
-<h1 style="text-align: center;">🚀 Top Bikes of the Month 🎉</h1>
-<div align="right"><a href="https://t.me/+5J4z-X8FhvZiZWVk">TAP TO JOIN</a><br/> * 🚀 - badge for TOP in a month </div>
+  <h1>🚀 Top Bikes of the Month 🎉</h1>
+  <div class="join-link">
+    <a href="https://t.me/+5J4z-X8FhvZiZWVk">🚴TAP TO JOIN</a><br>
+    <small>* 🚀 - badge for TOP in a month</small>
+  </div>
+
+  <div class="scrollable-table">
 <table>
 <thead>
 <tr><th>Rank</th><th>Nickname</th><th>Name</th><th>Bikecheck</th></tr>
@@ -158,6 +180,10 @@
 <tr><td>67</td><td>Shroom_Cycles</td><td>Maciej</td><td><a href="images/AgACAgQAAxkBAAPdZijnbHEmIUqOr5kyXEiQOxOQtTYAAnfCMRs2xEFRqVR3NMveYGABAAMCAAN5AAM0BA.jpg" rel="noopener" target="_blank"> <img alt="Bike Image" src="images/AgACAgQAAxkBAAPdZijnbHEmIUqOr5kyXEiQOxOQtTYAAnfCMRs2xEFRqVR3NMveYGABAAMCAAN5AAM0BA.jpg"/> </a></td></tr>
 </tbody>
 </table>
-<p><img alt="Visits" data-canonical-src="https://badges.pufler.dev/visits/dagmanov/bike-top-rating" src="https://badges.pufler.dev/visits/dagmanov/bike-top-rating" style="max-width: 100%;"/></p>
+</div>
+
+<div class="badge">
+  <img style="max-width: 100%; height: auto;" src="https://badges.pufler.dev/visits/dagmanov/bike-top-rating" alt="Visits Badge">
+</div>
 </body>
 </html>
