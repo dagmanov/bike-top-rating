@@ -8,40 +8,41 @@
   <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-    body {
+    html, body {
       font-family: 'Roboto', Arial, sans-serif;
       margin: 0;
-      padding: 10px;
+      padding: 0;
       background-color: #f9f9f9;
-      color: #333;
+      overflow-x: hidden; /* prevent horizontal scrolling */
     }
 
     h1 {
       text-align: center;
       font-size: 28px;
-      margin-top: 15px;
-      margin-bottom: 10px;
+      margin-top: 20px;
+      margin-bottom: 5px;
     }
 
     .join-link {
       text-align: right;
+      padding: 10px;
       font-size: 14px;
-      padding: 5px 10px;
     }
 
-    .scrollable-table {
-      overflow-x: auto;
-      margin: 0 auto;
-      max-width: 100%;
+    .table-container {
+      width: 100%;
+      overflow-x: auto; /* enables horizontal scroll only if necessary */
+      box-sizing: border-box;
+      padding: 5px;
     }
 
     table {
-      margin: 20px auto; /* ensure centering */
+      margin: 0 auto;
       border-collapse: collapse;
       width: 100%;
-      min-width: 600px; /* Adjust the minimum width as required */
-      max-width: 1000px;
-      table-layout: auto; /* adjust column width automatically */
+      min-width: 480px; /* slightly smaller to fit large mobile screens */
+      max-width: 800px;
+      table-layout: fixed;
       background-color: #fff;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       border-radius: 6px;
@@ -61,11 +62,10 @@
     th {
       background-color: #4CAF50;
       color: white;
-      font-size: 16px;
     }
 
     img {
-      width: 150px; /* fixed size to prevent small images issue */
+      width: 120px;
       height: auto;
       border-radius: 4px;
     }
@@ -73,27 +73,30 @@
     .badge {
       text-align: center;
       margin-top: 15px;
+      padding-bottom: 15px;
     }
 
-    @media screen and (max-width: 600px) {
-      body {
-        padding: 5px;
-      }
+    @media screen and (max-width: 480px) {
       h1 {
-        font-size: 22px;
+        font-size: 20px;
       }
-      table {
-        min-width: 100%;
-      }
-      th, td {
-        font-size: 13px;
-        padding: 6px;
-      }
-      img {
-        width: 100px; /* reduce on mobile for better fit */
-      }
+
       .join-link {
         font-size: 12px;
+      }
+
+      table {
+        min-width: 100%; /* Fully responsive without extra scrolling */
+        max-width: 100%;
+      }
+
+      th, td {
+        padding: 6px 4px;
+        font-size: 11px;
+      }
+
+      img {
+        width: 80px;
       }
     }
   </style>
@@ -105,7 +108,7 @@
     <small>* 🚀 - badge for TOP in a month</small>
   </div>
 
-  <div class="scrollable-table">
+  <div class="table-container">
 <table>
 <thead>
 <tr><th>Rank</th><th>Nickname</th><th>Name</th><th>Bikecheck</th></tr>
